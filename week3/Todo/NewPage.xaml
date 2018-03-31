@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="Todo.NewPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Todo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer x:Name="scrollViewer">
+        <ScrollViewer.Background>
+            <ImageBrush ImageSource="Assets/optionHeader.jpg" Stretch="UniformToFill" Opacity="0.2"/>
+        </ScrollViewer.Background>
+        <StackPanel x:Name="InlineTodoItemView" Grid.Column="1" HorizontalAlignment="Center" MaxWidth="700" MinWidth="300" Opacity="0.8" Margin="50,50,50,50">
+            <Button x:Name="imagePicker" Height="250" Width="{Binding ElementName=InlineTodoItemView,Path=ActualWidth}" Margin="0,20,0,0" Click="imagePicker_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="Assets/optionHeader2.jpg" Stretch="UniformToFill" Opacity="0.8"/>
+                </Button.Background>
+            </Button>
+            <AppBarButton x:Name="picker" Icon="Pictures" Label="select" Click="imagePicker_Click" HorizontalAlignment="Right"/>
+            <TextBlock Text="Edit Item" HorizontalAlignment="Center" FontFamily="Arial Black" FontSize="45" FontWeight="Bold" Margin="0,20,0,0"/>
+            <TextBlock x:Name="id" Text="" Visibility="Collapsed"/>
+            <TextBox x:Name="title" Header="Title" VerticalAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Auto" Margin="0,20,0,0"/>
+            <TextBox x:Name="description" Header="Description" VerticalAlignment="Center" Height="150" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" Margin="0,20,0,0"/>
+            <DatePicker x:Name="datePicker" Header="Due Date" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,20,0,0"/>
+            <Grid VerticalAlignment="Center" Margin="0,10,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="submit" Content="Create" Grid.Column="0"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,20,0,0" Click="submit_Click"/>
+                <Button x:Name="cancel" Content="Cancel" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,20,0,0" Click="cancel_Click"/>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:Name="delete" Icon="Delete" Label="Delete" Click="delete_Click" />
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
