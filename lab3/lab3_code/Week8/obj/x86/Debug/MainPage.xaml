@@ -1,0 +1,62 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="Week8.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Week8"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="20,20,20,20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <MediaElement x:ConnectionId='2' x:Name="mediaPlayer" Grid.Row="0"
+               
+               AutoPlay="False"                                  Volume="0.5"                               />
+        <TextBlock x:ConnectionId='3' x:Name="tip" Grid.Row="0" Text="当前没有播放文件。" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Ellipse x:ConnectionId='4' Grid.Row="0" x:Name="ellipse" Visibility="Collapsed" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="300" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <CompositeTransform />
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <ImageBrush x:ConnectionId='6' x:Name="imageBrush" ImageSource="Assets/timg.jpg" Stretch="UniformToFill"></ImageBrush>
+            </Ellipse.Fill>
+            <Ellipse.Resources>
+                <Storyboard x:ConnectionId='7' x:Name="storyboard" RepeatBehavior="Forever">
+                    <DoubleAnimation Duration="0:0:20" To="360" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="ellipse" d:IsOptimized="True"/>
+                </Storyboard>
+            </Ellipse.Resources>
+        </Ellipse>
+        <Slider x:ConnectionId='5' x:Name="mediaSlider" Grid.Row="1"                                    Visibility="Collapsed"/>
+
+    </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:ConnectionId='8' Name="playControl" Icon="Play" Label="播放"                          />
+            <AppBarButton x:ConnectionId='9' Name="stop"  Icon="Stop" Label="停止"                   />
+            <AppBarButton x:ConnectionId='10' Name="volumn" Icon="Volume" Label="音量">
+                <AppBarButton.Flyout>
+                    <Flyout>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"></ColumnDefinition>
+                                <ColumnDefinition Width="100"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock x:ConnectionId='14' x:Name="volumnNum" Grid.Column="0"                                                VerticalAlignment="Center"></TextBlock>
+                            <Slider x:ConnectionId='15' x:Name="volumnSlider" Grid.Column="1" Value="50"                               ></Slider>
+                        </Grid>
+                    </Flyout>
+                </AppBarButton.Flyout>
+            </AppBarButton>
+            <AppBarButton x:ConnectionId='11' Name="showSlider" Icon="SlideShow" Label="隐藏进度条"                          />
+            <AppBarButton x:ConnectionId='12' Name="scale" Icon="FullScreen" Label="全屏"                    />
+            <AppBarButton x:ConnectionId='13' Name="open" Icon="OpenFile" Label="选择播放文件"                        />
+            
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
+
