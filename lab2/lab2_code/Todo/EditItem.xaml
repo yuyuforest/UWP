@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="Todo.EditItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Todo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer x:Name="scrollViewer">
+        <StackPanel x:Name="InlineTodoItemView" HorizontalAlignment="Center" MaxWidth="700" MinWidth="300" Margin="50,50,50,50">
+            <TextBlock Text="Edit Item" HorizontalAlignment="Center" FontFamily="Arial Black" FontSize="45" FontWeight="Bold" Margin="0,0,0,20"/>
+            <Image x:Name="image" Source="Assets/optionHeader.jpg"  Height="250" Stretch="UniformToFill" />
+            <AppBarButton x:Name="picker" Icon="Pictures" Label="select" Click="imagePicker_Click" HorizontalAlignment="Right"/>
+            <TextBlock x:Name="id" Text="" Visibility="Collapsed"/>
+            <TextBox x:Name="title" Header="Title" VerticalAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Auto" Margin="0,20,0,0"/>
+            <TextBox x:Name="description" Header="Description" VerticalAlignment="Center" Height="150" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" Margin="0,20,0,0"/>
+            <DatePicker x:Name="datePicker" Header="Due Date" HorizontalAlignment="Stretch" Margin="0,20,0,0"/>
+            <Grid VerticalAlignment="Center" Margin="0,20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="submit" Content="Create" Grid.Column="0"  HorizontalAlignment="Stretch" Click="submit_Click"/>
+                <Button x:Name="cancel" Content="Cancel" Grid.Column="2" HorizontalAlignment="Stretch" Click="cancel_Click"/>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

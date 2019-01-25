@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+
+
+<tile>
+  <visual>
+
+    <binding template="TileSmall">
+      <image src='Assets/optionHeader.jpg' placement='background'/>
+      <text>{0}</text>
+      <text hint-style='captionsubtle' hint-wrap='true'>{1}</text>
+    </binding>
+
+    <binding template="TileMedium">
+      <image src='Assets/optionHeader.jpg' placement='background'/>
+      <text>{0}</text>
+      <text hint-style='captionsubtle' hint-wrap='true'>{1}</text>
+    </binding>
+
+    <binding template="TileWide">
+      <image src='Assets/optionHeader.jpg' placement='background'/>
+      <text>{0}</text>
+      <text hint-style='captionsubtle' hint-wrap='true'>{1}</text>
+    </binding>
+
+    <binding template="TileLarge">
+      <image src='Assets/optionHeader.jpg' placement='background'/>
+      <text>{0}</text>
+      <text hint-style='captionsubtle' hint-wrap='true'>{1}</text>
+    </binding>
+
+  </visual>
+</tile>

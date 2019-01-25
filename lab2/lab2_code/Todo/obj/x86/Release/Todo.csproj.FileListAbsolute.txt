@@ -1,0 +1,12 @@
+E:\Code\MOSAD\week3\Todo\obj\x86\Release\App.g.i.cs
+E:\Code\MOSAD\week3\Todo\obj\x86\Release\App.g.cs
+E:\Code\MOSAD\week3\Todo\obj\x86\Release\MainPage.g.i.cs
+E:\Code\MOSAD\week3\Todo\obj\x86\Release\MainPage.g.cs
+E:\Code\MOSAD\week3\Todo\obj\x86\Release\XamlTypeInfo.g.cs
+E:\Code\MOSAD\week3\Todo\obj\x86\Release\App.xaml
+E:\Code\MOSAD\week3\Todo\obj\x86\Release\MainPage.xaml
+E:\Code\MOSAD\week3\Todo\obj\x86\Release\App.xbf
+E:\Code\MOSAD\week3\Todo\obj\x86\Release\MainPage.xbf
+E:\Code\MOSAD\week3\Todo\obj\x86\Release\XamlSaveStateFile.xml
+E:\Code\MOSAD\week3\Todo\obj\x86\Release\Todo.csproj.CoreCompileInputs.cache
+E:\Code\MOSAD\week3\Todo\obj\x86\Release\Todo.csprojResolveAssemblyReference.cache

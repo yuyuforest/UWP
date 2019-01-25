@@ -1,0 +1,3 @@
+C:\Code\MOSAD\week6\DataAccessLibrary\obj\Debug\netstandard2.0\DataAccessLibrary.csproj.CoreCompileInputs.cache
+C:\Code\MOSAD\week6\DataAccessLibrary\obj\Debug\netstandard2.0\DataAccessLibrary.AssemblyInfoInputs.cache
+C:\Code\MOSAD\week6\DataAccessLibrary\obj\Debug\netstandard2.0\DataAccessLibrary.AssemblyInfo.cs
